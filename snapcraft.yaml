@@ -1,0 +1,29 @@
+name: nrich
+base: core20
+version: 0.1.1
+summary: CLI tool to analyze IPs for open ports/vulnerabilities
+description: |
+  A command-line tool to quickly analyze all IPs in a file and see which
+  ones have open ports/ vulnerabilities. Can also be fed data from stdin to
+  be used in a data pipeline.
+
+grade: devel
+confinement: strict
+
+apps:
+  nrich:
+    command: bin/nrich
+    plugs:
+      - home
+      - network
+
+parts:
+  nrich:
+    plugin: rust
+    source: https://gitlab.com/shodan-public/nrich.git
+    source-tag: $SNAPCRAFT_PROJECT_VERSION
+    build-packages:
+      - pkg-config
+      - libssl-dev
+    stage-packages:
+      - libssl1.1
