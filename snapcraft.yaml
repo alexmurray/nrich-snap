@@ -7,7 +7,7 @@ description: |
   ones have open ports/ vulnerabilities. Can also be fed data from stdin to
   be used in a data pipeline.
 
-grade: devel
+grade: stable
 confinement: strict
 
 apps:
