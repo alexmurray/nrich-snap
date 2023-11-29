@@ -1,6 +1,6 @@
 name: nrich
 base: core20
-version: 0.4.1
+version: 0.4.2
 summary: CLI tool to analyze IPs for open ports/vulnerabilities
 description: |
   A command-line tool to quickly analyze all IPs in a file and see which
